@@ -1,55 +1,24 @@
-export default function Home() {
+import PageNav from "../PageNav"
+export default function ReadingProgress() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div>
-        <h1>
-          Reading Progress
-        </h1>
+    <div className="relative min-h-screen justify-center bg-slate-900 items-center ">
+      <div aria-hidden="true" className="absolute inset-y-24 inset-x-56 w-32 rounded-full rotate-45 bg-gradient-to-b from-pink-600 to-purple-600 blur-3xl z-0"></div>
+      <div aria-hidden="true" className="absolute inset-y-96 inset-x-[550px] w-32 h-[500px] rotate-45 rounded-full bg-gradient-to-b from-pink-600 to-purple-600 blur-3xl z-0"></div>
+      <div className="z-40">
+        <PageNav />
+        <main className="flex flex-col items-left justify-between p-16 gap-24 text-white">
+          <div>
+            <h1 className="font-mono font-bold text-9xl sticky whitespace-pre-wrap">
+              READING<br/>PROGRESS
+            </h1>
+          </div>
+          <div>
+            <h1>
+              Your Favorite Genres:
+            </h1>
+          </div>
+        </main>
       </div>
-      
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-3 lg:text-left">
-        <a
-          href=".."
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_self"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Home
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Return to the Book Scribe homepage
-          </p>
-        </a>
-
-        <a
-          href="../BookSearch"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_self"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Book Search
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find a book, author, or series!
-          </p>
-        </a>
-
-        <a
-          href="../BookLog"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_self"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Book Log
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Track what books you have read! 
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    </div>
+  );
 }

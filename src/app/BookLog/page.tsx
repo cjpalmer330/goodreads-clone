@@ -1,55 +1,22 @@
-export default function Home() {
+import PageNav from "../PageNav"
+export default function BookLog() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div>
-        <h1>
-          Book Log
-        </h1>
-      </div>
+    <div className="grid-flow-row  bg-slate-900 text-white">
+      <PageNav />
+      <main className="flex min-h-screen flex-col justify-between p-16 font-mono font-bold">
+
+        <div aria-hidden="true" className="inset-x-[calc(50vw-400px)] inset-y-96 absolute w-[800px] h-[800px] rounded-full bg-gradient-to-b from-pink-600 to-purple-600 z-0 blur-2xl"></div>
+        <div aria-hidden="true" className="absolute bg-slate-900 w-[450px] h-[450px] rounded-full inset-x-[calc(50vw-225px)] inset-y-[calc(400px+155px)] z-10 rotate-90 blur-2xl"></div>
+
+        <div className="z-40 items-left">
+          <div className="text-left text-9xl">
+            <h1>
+              Book Log
+            </h1>
+          </div>
+        </div>
+      </main>
       
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-3 lg:text-left">
-        <a
-          href=".."
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_self"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Home
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Return to the Book Scribe homepage
-          </p>
-        </a>
-
-        <a
-          href="../BookSearch"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_self"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Book Search
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find a book, author, or series!
-          </p>
-        </a>
-
-        <a
-          href="../ReadingProgress"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_self"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Reading Progress
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            See your favorite genres, total page count, reading speed and more!
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    </div>
+  );
 }
