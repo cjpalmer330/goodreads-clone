@@ -4,7 +4,7 @@ import PageNav from './PageNav'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-slate-900 text-white">
+    <main className="flex h-screen flex-col items-center justify-between p-24 bg-slate-900 text-white">
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-xl lg:flex">
         <h1 className="fixed left-0 top-0 flex w-full justify-center  p-6 backdrop-blur-2xl border-slate-600 bg-slate-800 from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border ">
           A personalized reading log. Tracking what Goodreads won't
@@ -20,8 +20,7 @@ export default function Home() {
             <Image
               src="/github-mark.svg"
               alt="GitHub Logo"
-              className="dark:invert"
-              width={45}
+              width={75}
               height={24}
               priority
             />
@@ -29,11 +28,6 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="relative flex place-items-center absolute h-[300px] w-[480px] -translate-x-1/2 rounded-full bg-gradient-radial
-       from-white to-transparent blur-2xl content-[''] absolute -z-20 h-[180px] w-[240px]
-       translate-x-1/3 bg-gradient-conic from-sky-200 via-blue-200 blur-2xl content-['']
-       dark:bg-gradient-to-br dark:from-transparent dark:to-blue-700 dark:opacity-10 dark:from-sky-900 dark:via-[#0141ff] dark:opacity-40 lg:h-[360px] z-[-1]"
-      ></div>
       <div className="relative flex place-items-center">
         <h1 className="mb-3 text-6xl font-semibold">
           Book Scribe
