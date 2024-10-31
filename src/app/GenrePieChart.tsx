@@ -3,7 +3,10 @@ import React from 'react';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
 
+
+
 ChartJS.register(ArcElement, Tooltip, Legend);
+
 
 export const data = {
   labels: ['Science Fiction', 'Romance', 'Fantasy', 'Philosophy', 'Literary Fiction', 'Graphic Novels'],
@@ -37,7 +40,6 @@ export const options = {
     legend: {
       position: 'bottom',
       labels: {
-        position: 'bottom',
         color: 'white'
       }
     }
@@ -45,5 +47,5 @@ export const options = {
 }
 
 export default function GenrePieChart() {
-  return <Pie data={data} options={options}/>;
+  return <Pie data={data} />;
 }

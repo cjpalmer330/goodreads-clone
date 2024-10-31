@@ -1,0 +1,5 @@
+CREATE DATABASE BookDB;
+
+
+SELECT *
+FROM book
